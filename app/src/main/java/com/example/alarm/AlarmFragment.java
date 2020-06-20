@@ -64,7 +64,7 @@ public class AlarmFragment extends Fragment {
         remove = viewGroup.findViewById(R.id.removeAl);
         ringtoneShow = viewGroup.findViewById(R.id.ringtoneShow);
         ringtoneRemove = viewGroup.findViewById(R.id.ringtoneRemove);
-        TextView tv = (TextView) getActivity().findViewById(R.id.tv); //추가
+        //TextView tv = (TextView) getActivity().findViewById(R.id.tv); //추가
 
         //알람 설정
         set.setOnClickListener(new View.OnClickListener() {

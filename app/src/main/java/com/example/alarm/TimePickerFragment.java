@@ -40,7 +40,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        TextView tv = (TextView) getActivity().findViewById(R.id.tv);
+        TextView tv = (TextView) getActivity().findViewById(R.id.tv); //추가
         String aMpM = "AM";
         if(hourOfDay > 11){
             aMpM = "PM";
