@@ -32,20 +32,20 @@
 <!--            //activity_timepicker2.xml-->
 
 
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv"/>
-
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onButtonClicked"
-            android:text="Set Time"
-            android:layout_below="@id/tv"
-            />
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:onClick="onButtonClicked"
+                android:text="Set Time" />
 
         </LinearLayout>
 
