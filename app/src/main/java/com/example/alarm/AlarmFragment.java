@@ -41,7 +41,7 @@ import static android.content.ContentValues.TAG;
 public class AlarmFragment extends Fragment {
     private static final int REQUEST_CODE_RINGTONE = 10005;
     ViewGroup viewGroup;
-    private Button set,remove, ringtoneShow, ringtoneRemove;
+    private Button set,remove, ringtoneShow, ringtoneRemove, btn;
     private PendingIntent alarmIntent;
     private TimePicker timePicker;
     private AlarmManager alarmMgr;
@@ -52,6 +52,7 @@ public class AlarmFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.alarm);
 
     }
 
@@ -64,7 +65,7 @@ public class AlarmFragment extends Fragment {
         remove = viewGroup.findViewById(R.id.removeAl);
         ringtoneShow = viewGroup.findViewById(R.id.ringtoneShow);
         ringtoneRemove = viewGroup.findViewById(R.id.ringtoneRemove);
-        //TextView tv = (TextView) getActivity().findViewById(R.id.tv); //추가
+        btn = viewGroup.findViewById(R.id.btn);
 
         //알람 설정
         set.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +94,15 @@ public class AlarmFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+        //팝업 추가
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                onBtnClicked(viewGroup);
             }
         });
 
@@ -221,9 +231,26 @@ public class AlarmFragment extends Fragment {
     }
 
     //추가
-    public void onButtonClicked(View v){
-        DialogFragment newFragment = new TimePickerFragment();
-        newFragment.show(getFragmentManager(),"TimePicker");
+   /* @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_timepicker2);
+        findViewById(R.id.btn);
+    }*/
+/*
+    public void onBtnClicked(View v){
+        TimePickerFragment newFragment = new TimePickerFragment();
+        //show : fragmentManager에 추가된 대화상자 출력
+        newFragment.show(getFragmentManager(), "TimePicker");
+    }*/
+
+
+
+
+    public void onBtnClicked(View v){
+        TimePickerFragment newFragment = new TimePickerFragment();
+        //show : fragmentManager에 추가된 대화상자 출력
+        newFragment.show(getFragmentManager(), "TimePicker");
     }
 
     //    public void startAlarm(View view){

@@ -7,11 +7,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.Gravity;
+//import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
@@ -57,4 +59,15 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         tv.setText(tv.getText() + String.valueOf(hourOfDay) + "시 "
                 + String.valueOf(minute) + "분\n");
     }
+
+  /*  @Override
+        public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+
+            TextView textView = (TextView) getActivity().findViewById(R.id.tv);
+           // Button btn = (Button) findViewById(R.id.btn);
+            textView.setText("applied!!");
+
+    }*/
+
 }
